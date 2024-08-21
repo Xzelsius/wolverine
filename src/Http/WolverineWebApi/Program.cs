@@ -92,6 +92,11 @@ builder.Services.ConfigureSystemTextJsonForWolverineOrMinimalApi(o =>
     o.SerializerOptions.WriteIndented = true;
 });
 
+builder.Services.Configure<TenancyOptions>(opts =>
+{
+    // whatever
+});
+
 #region sample_calling_ApplyAsyncWolverineExtensions
 
 var app = builder.Build();
